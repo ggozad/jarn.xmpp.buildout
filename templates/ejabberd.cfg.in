@@ -6,7 +6,7 @@
   [
 
   {5222, ejabberd_c2s, [
-      {certfile, "/Applications/ejabberd-2.1.6/conf/server.pem"}, starttls,
+      {certfile, "${certfile}"}, starttls,
       {access, c2s},
       {shaper, c2s_shaper},
       {max_stanza_size, 65536}
