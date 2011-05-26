@@ -17,7 +17,7 @@
          {max_stanza_size, 131072}
         ]},
   
-  {5347, ejabberd_service, [
+  {{${collaboration_port}, {${collaboration_allowed_subnet}} }, ejabberd_service, [
             {access, all}, 
             {shaper_rule, fast},
             {ip, {127, 0, 0, 1}},
