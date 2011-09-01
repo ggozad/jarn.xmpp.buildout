@@ -1,6 +1,6 @@
 {loglevel, 4}.
 
-{hosts, ["${xmppdomain}", "localhost"]}.
+{hosts, ["${xmppdomain}"]}.
 
 {listen,
   [
@@ -20,7 +20,7 @@
             {access, all}, 
             {shaper_rule, fast},
             {ip, {127, 0, 0, 1}},
-            {hosts, ["collaboration.${xmppdomain}", "collaboration.localhost"],
+            {hosts, ["collaboration.${xmppdomain}"],
              [{password, "${component_password}"}]
             }
            ]},
@@ -38,7 +38,6 @@
 {shaper, fast, {maxrate, 50000}}.
 
 {host_config, "${xmppdomain}", [{acl, admin, {user, "${admin_userid}", "${xmppdomain}"}}]}.
-{host_config, "localhost", [{acl, admin, {user, "${admin_userid}", "localhost"}}]}.
 
 {acl, local, {user_regexp, ""}}.
 
